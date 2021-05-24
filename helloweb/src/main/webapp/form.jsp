@@ -34,6 +34,7 @@
 		술먹기<input type="checkbox" name="hobby" value="drinking" />
 		수영<input type="checkbox" name="hobby" value="swimming" />
 		요리<input type="checkbox" name="hobby" value="cooking" />
+		<br/><br/>
 		
 		자기소개:<br/>
 		<textarea name="profile"></textarea>
