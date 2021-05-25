@@ -25,12 +25,6 @@
 	<br/>
 	<a href="<%=request.getContextPath() %>">메인으로 돌아가기</a>
 	</form>
-	<button onclick="fb()">asd</button>
 	
-	<script>
-		function fb(){
-			alert('12');
-		}
-	</script>
 </body>
 </html>
