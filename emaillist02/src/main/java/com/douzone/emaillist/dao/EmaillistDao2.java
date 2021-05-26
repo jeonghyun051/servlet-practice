@@ -8,12 +8,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.douzone.emaillist.vo.EmaillistVo;
+import com.douzone.emaillist.vo.EmaillistVo2;
 
 
-public class EmaillistDao {
+public class EmaillistDao2 {
 
-	public Boolean insert(EmaillistVo vo) {
+	public Boolean insert(EmaillistVo2 vo) {
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -60,9 +60,9 @@ public class EmaillistDao {
 		return result;
 	}
 
-	public List<EmaillistVo> findAll() {
+	public List<EmaillistVo2> findAll() {
 
-		List<EmaillistVo> result = new ArrayList<>();
+		List<EmaillistVo2> result = new ArrayList<>();
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -85,7 +85,7 @@ public class EmaillistDao {
 				String firstName = rs.getString(2);
 				String lastName = rs.getString(3);
 				String email = rs.getString(4);
-				EmaillistVo vo = new EmaillistVo();
+				EmaillistVo2 vo = new EmaillistVo2();
 				vo.setNo(no);
 				vo.setFirstName(firstName);
 				vo.setLastName(lastName);

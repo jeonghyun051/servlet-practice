@@ -9,4 +9,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
   </parent>
   <artifactId>helloweb</artifactId>
   <packaging>war</packaging>
+  
+  <build>
+		<finalName>helloweb</finalName>
+	</build>
 </project>

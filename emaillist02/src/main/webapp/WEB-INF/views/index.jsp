@@ -1,11 +1,10 @@
-﻿<%@ page import="com.douzone.emaillist.dao.EmaillistDao"%>
-<%@ page import="com.douzone.emaillist.vo.EmaillistVo"%>
+<%@ page import="com.douzone.emaillist.dao.EmaillistDao2"%>
+<%@ page import="com.douzone.emaillist.vo.EmaillistVo2"%>
 <%@ page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<% 
-	List<EmaillistVo> list = (List<EmaillistVo>)request.getAttribute("list");
-
+<%
+List<EmaillistVo2> list = (List<EmaillistVo2>)request.getAttribute("list");
 %>
 
 <html>
@@ -17,7 +16,7 @@
 	<h1>메일 리스트에 가입되었습니다.</h1>
 	<p>입력한 정보 내역입니다.</p>
 	<%
-	for (EmaillistVo vo : list) {
+	for (EmaillistVo2 vo : list) {
 	%>
 	<!-- 메일정보 리스트 -->
 	<table border="1" cellpadding="5" cellspacing="2">

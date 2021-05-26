@@ -5,17 +5,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-List<GuestBookVo> list = (List<GuestBookVo>) request.getAttribute("list");
-int size = (int) request.getAttribute("size");
+	List<GuestBookVo> list = (List<GuestBookVo>) request.getAttribute("list");
+	int size = (int) request.getAttribute("size");
+	
 %>
+
 <%
-String sucess = request.getParameter("sucess");
-if ("true".equals(sucess)) {
-
-PrintWriter pw = response.getWriter();
-pw.print("<script>alert('삭제성공');</script>");
-
-}
+	String sucess = request.getParameter("sucess");
+	if ("true".equals(sucess)) {
+	out.println("<script>alert('삭제성공');</script>");
+	}
 %>
 
 <html>

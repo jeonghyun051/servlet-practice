@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.douzone.emaillist.dao.EmaillistDao;
-import com.douzone.emaillist.vo.EmaillistVo;
+import com.douzone.emaillist.dao.EmaillistDao2;
+import com.douzone.emaillist.vo.EmaillistVo2;
 
 public class EmaillistController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -30,12 +30,12 @@ public class EmaillistController extends HttpServlet {
 			String lastName = request.getParameter("ln");
 			String email = request.getParameter("email");
 			
-			EmaillistVo vo = new EmaillistVo();
+			EmaillistVo2 vo = new EmaillistVo2();
 			vo.setFirstName(firstName);
 			vo.setLastName(lastName);
 			vo.setEmail(email);
 						
-			new EmaillistDao().insert(vo);
+			new EmaillistDao2().insert(vo);
 			
 			// 2. redirect 응답
 			response.sendRedirect(request.getContextPath() + "/el");
@@ -45,7 +45,7 @@ public class EmaillistController extends HttpServlet {
 			/* default request(action) */
 
 			// 1. 요청처리
-			List<EmaillistVo> list = new EmaillistDao().findAll();
+			List<EmaillistVo2> list = new EmaillistDao2().findAll();
 
 			// 2. request범위에 데이터(객체) 저장
 			request.setAttribute("list", list);

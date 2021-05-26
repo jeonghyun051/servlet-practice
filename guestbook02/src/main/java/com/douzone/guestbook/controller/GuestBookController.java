@@ -48,6 +48,7 @@ public class GuestBookController extends HttpServlet {
 			
 			if(password.equals(bookPassword)){
 				new GuestBookDao().deleteById(no);
+	
 				response.sendRedirect(request.getContextPath()+ "/gb?sucess=true");
 			} else {
 				PrintWriter pw =response.getWriter();		
@@ -90,7 +91,5 @@ public class GuestBookController extends HttpServlet {
 	
 		doGet(request, response);
 		
-		
 	}
-
 }

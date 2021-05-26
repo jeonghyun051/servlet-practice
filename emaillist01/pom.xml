@@ -9,7 +9,6 @@
   <packaging>war</packaging>
   
   	<dependencies>
-	
 		<!-- MariaDB JDBC Driver -->
 		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
 		<dependency>
@@ -18,4 +17,8 @@
 			<version>2.7.2</version>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<finalName>emaillist01</finalName>
+	</build>
 </project>
