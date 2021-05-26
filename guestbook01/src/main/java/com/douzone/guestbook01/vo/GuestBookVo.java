@@ -36,7 +36,7 @@ public class GuestBookVo {
 		this.message = message;
 	}
 	public String getRegDate() {
-		Date a = new Date();
+		Date a = new Date();	// 현재날짜 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String regDate = sdf.format(a);
 		return regDate;
