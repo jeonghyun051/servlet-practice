@@ -1,5 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% pageContext.setAttribute("newline", "\n");%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +17,11 @@
 	${bVal } <br/>
 	${sVal } <br/>
 	${fVal } <br/>
-	
+	<p style="border:1px solid #00f; padding:10px">
+		${fn:replace(sVal,newline,"<br/>") } <br/>
+	</p>
+		
+		
 	<h1>객체 출력</h1>
 	${vo.no } <br/>
 	${vo.name } <br/>
@@ -30,6 +38,20 @@
 	
 	${empty obj }<br/>
 	${not empty obj }<br/>
+	
+	<h1>논리 연산</h1>
+	
+	<h1>map의 값</h1>
+	${m.ival }<br/>
+	${m.lval }<br/>
+	${m.fval }<br/>
+	${m.bval }<br/>
+	
+	<h1>요청 파라미터의 값</h1>
+	--${param.a }-- <br/>
+	--${param.email }--	<br/>
+	
+	
 	
 	
 </body>
