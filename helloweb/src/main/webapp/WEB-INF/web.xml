@@ -14,6 +14,17 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://JAVA.sun.com/xml/ns
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>LifeCircleServlet</display-name>
+    <servlet-name>LifeCircleServlet</servlet-name>
+    <servlet-class>com.douzone.helloweb.controller.LifeCircleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LifeCircleServlet</servlet-name>
+    <url-pattern>/lc</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
